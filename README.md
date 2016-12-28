@@ -1,5 +1,5 @@
 # Elastic Beanstalk CLI Cheat Sheet
-This cheat sheet is a reference for the EB CLI, which is a commandline interface that is more user-friendly than raw AWS CLI commands for managing Elastic Beanstalk instances.
+Elastic Beanstalk brings the benefits of PaaS (Platform as a service) providers such as Heroku to AWS infrastructure. This is a reference for the EB CLI, which is a commandline interface that is more user-friendly than standard AWS CLI commands.
 
 ## Quick Start
 
