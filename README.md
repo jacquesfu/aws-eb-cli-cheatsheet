@@ -19,18 +19,15 @@ Initialize `eb cli` in the working directory. You will need to choose `Applicati
 $ eb init
 ```
 
-This will create and deploy the new environment at the same time.
+This will create and deploy the new environment at the same time. Then open in your browser.
 
     $ eb create
+    $ eb open
 
 Subsequent deployments can be made through a simple deploy subcommand. Uncommitted staged files can also be added with the `--staged` flag.
 
     $ eb deploy
     $ eb deploy --staged
-
-You can also launch the environment in your browser.
-
-    $ eb open
 
 ## Basic Configuration
 
@@ -45,6 +42,20 @@ $ eb printenv
 $ eb setenv eb [VAR_NAME=KEY]
 ```
 
+## Common Tasks
+
+List environments and show current
+
+    $ eb list
+
+Change current environment
+
+    $ eb use [environment]
+
+Browse log files
+
+    $ eb logs
+
 List, get, save locally and update configuration.
 
 ```
@@ -54,10 +65,17 @@ $ eb config save
 $ eb config put [config]
 ```
 
+Apply configuration on current environment.
+
+    $ eb config --cfg [config]
+
 Deploy using saved configuration
 
-    $ eb create [environment_name] --cfg gateway
+    $ eb create [environment] --cfg gateway
 
+Deploy worker environment
+
+    $ eb create [environment] -t worker
 
 ## All commands
 
