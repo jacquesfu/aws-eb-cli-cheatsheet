@@ -76,6 +76,10 @@ Deploy using saved configuration
 Deploy worker environment
 
     $ eb create [environment] -t worker
+    
+Initialize with alternate AWS credentials
+
+    $ eb init --profile user2
 
 ## All commands
 
