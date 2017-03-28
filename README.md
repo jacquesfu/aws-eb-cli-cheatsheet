@@ -109,3 +109,42 @@ terminate   Terminates the environment.
 upgrade     Updates the environment to the most recent platform version.
 use         Sets default environment.
 ```
+
+## Advanced
+
+**Change to Root User**
+
+Sometimes you may need to change to the root user. Run:
+
+```
+sudo su -
+```
+
+This works because by default `ec2-user` is in the wheel group. 
+
+**Give the Web User a Shell**
+
+
+ElasticBeanstalk gives you a nodejs user but may also give other users. A php app is run by the `webapp` user. To see your users, run: 
+
+```
+cat /etc/passwd
+```
+
+As you can see, `nodejs` and `webapp` by default do not have a shell, meaning you cannot switch to them while ssh'd in.
+
+For testing, it may also become neccesary to switch to your web user, but that user doesn't have a shell by default. So to give it a shell, run:
+
+```
+# first switch to root user
+# then...
+usermod -s /bin/sh nodejs
+```
+
+Once they have a shell, you can switch to them from the root user:
+
+```
+su - nodejs
+# or
+su - webapp
+```
