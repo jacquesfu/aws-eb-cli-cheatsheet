@@ -77,7 +77,7 @@ Deploy worker environment
 
     $ eb create [environment] -t worker
     
-Initialize with alternate AWS credentials from ~/.aws
+Initialize with alternate AWS credentials from ~/.aws/credentials
 
     $ eb init --profile user2
 
