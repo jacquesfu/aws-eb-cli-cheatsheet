@@ -40,6 +40,7 @@ View and Set Environment variables
 ```
 $ eb printenv
 $ eb setenv eb [VAR_NAME=KEY] [VAR_NAME2=KEY2] ...
+```
 
 ## Common Tasks
 
@@ -79,6 +80,17 @@ Deploy worker environment
 Initialize with alternate AWS credentials from ~/.aws/credentials
 
     $ eb init --profile user2
+    
+## Common Errors
+
+>"Failed to run npm install" and "EACCES: permission denied"
+```
+# Force npm to run node-gyp also as root, preventing permission denied errors in AWS with npm@5
+# Add this line to file named .npmrc in project root (may need to create)
+unsafe-perm=true
+# Add this line to file named .ebextensions in project root (may need to create)
+node_modules/
+```
 
 ## All commands
 
