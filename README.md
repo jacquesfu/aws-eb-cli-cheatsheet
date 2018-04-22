@@ -39,8 +39,7 @@ View and Set Environment variables
 
 ```
 $ eb printenv
-$ eb setenv eb [VAR_NAME=KEY]
-```
+$ eb setenv eb [VAR_NAME=KEY] [VAR_NAME2=KEY2] ...
 
 ## Common Tasks
 
