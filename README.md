@@ -91,7 +91,7 @@ Initialize with alternate AWS credentials from ~/.aws/credentials
 # Force npm to run node-gyp also as root, preventing permission denied errors in AWS with npm@5
 # Add this line to file named .npmrc in project root (may need to create)
 unsafe-perm=true
-# Add this line to file named .ebextensions in project root (may need to create)
+# Add this line to file named .ebignore in project root (may need to create)
 node_modules/
 ```
 
