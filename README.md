@@ -150,6 +150,24 @@ sudo su -
 
 This works because by default `ec2-user` is in the wheel group. 
 
+
+**Run NPM or NODE**
+
+Need to install something for testing like `npm install ssh2-sftp-client`, or `node -v` ?
+
+Simply put the node bin directory into your path. I change to root user first: `sudo su - root`
+
+Then: 
+
+```
+export PATH="$PATH:/opt/elasticbeanstalk/node-install/node-v10.20.1-linux-x64/bin"
+```
+
+You will see there are many versions to pick from in node-install. In our case, we chose v10.20.1 
+
+After running this command, you can do `node -v` and check that it is equal to the version you specified.
+
+
 **Give the Web User a Shell**
 
 
