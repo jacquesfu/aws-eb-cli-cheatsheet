@@ -150,6 +150,24 @@ sudo su -
 
 This works because by default `ec2-user` is in the wheel group. 
 
+**Change NodeJs Files Directly in Elastic Beanstalk for Testing**
+
+In the horrible event you decide to test something in production, simply make changes to your files and restart node.
+
+Elastic Beanstalk will automatically restart your service by re-running your start command, specified in your Elastic Beanstalk config.
+
+```
+eb ssh
+
+# go edit your files in 
+cd /var/app/current
+
+# like: vi dist/server.js
+
+sudo pkill -f node
+```
+
+_[source](https://superuser.com/questions/1036374/in-elasticbeanstalk-can-i-ssh-in-and-manually-restart-the-node-app)_
 
 **Run NPM or NODE**
 
